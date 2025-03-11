@@ -37,7 +37,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}/pr-preview
+      url: ${{ steps.deployment.outputs.page_url }}pr-preview
     runs-on: ubuntu-latest
     needs: build
     steps:
