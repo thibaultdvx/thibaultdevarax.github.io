@@ -30,6 +30,8 @@ jobs:
 
   # Deployment job
   deploy-preview:
+    runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
