@@ -4,15 +4,20 @@ title: Posts
 ---
 {% include search-lunr.html %}
 
+*****
+
 {% for category in site.categories %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
-    <ul>
+  <h3>{{ category }}</h3>
     {% for post in category.last %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <article class="post-item">
+        <h4 class="post-item-title">
+          <a href="{{ post.url }}">{{ post.title | escape }}</a>
+        </h4> 
+      </article>
     {% endfor %}
-    </ul>
-  </li>
 {% endfor %}
+
+*****
 
 {%- for post in site.posts -%}
   {%- capture current_year -%}{{ post.date | date: "%Y" }}{%- endcapture -%}
