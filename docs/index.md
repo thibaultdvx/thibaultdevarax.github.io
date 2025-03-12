@@ -3,6 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+heading: "Réseau IABM"
+subheading: "Chercheurs français en Intelligence Artificielle appliquée à l'Imagerie Biomédicale."
+banner: "/images/example.png"
 ---
 
 Home page !
