@@ -30,37 +30,14 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-archives
+  - jekyll-remote-theme
 
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - day
-    - tags
-  layouts:
-    year: year-archive
-    month: month-archive
-    day: day-archive
-    tag: tag-archive
-  permalinks:
-    year: /notes/:year
-    month: /notes/:year/:month
-    day: /notes/:year/:month/:day
-    tag: /tags/:name
+remote_theme: "jeffreytse/jekyll-theme-yat"
 
-minima:
-  nav_pages:
-    - about.md
-    - posts.md
-  show_excerpts: true
-  social_links:
-    - title: GitHub
-      icon: github
-      url: "https://github.com/reseau-iabm"
-    - title: Discord
-      icon: discord
-      url: "https://discord.gg/tCh9wujN"
+header_pages:
+  - about.html
+  - posts.html
+  - search.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
