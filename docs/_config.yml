@@ -31,6 +31,19 @@ theme: minima
 plugins:
   - jekyll-feed
 
+minima:
+  nav_pages:
+    - about.md
+    - posts.md
+  show_excerpts: true
+  social_links:
+    - title: GitHub
+      icon: github
+      url: "https://github.com/reseau-iabm"
+    - title: Discord
+      icon: discord
+      url: "https://discord.gg/tCh9wujN"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
