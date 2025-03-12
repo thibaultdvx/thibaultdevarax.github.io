@@ -7,11 +7,9 @@ title: Posts
 {%- for category in site.categories -%}
   <h3>{{ category }}</h3>
   {%- for post in site.categories[category] -%}
-    <article class="post-item">
-      <h4 class="post-item-title">
-        <a href="{{ post.url }}">{{ post.title | escape }}</a>
-      </h4> 
-    </article>
+    <div class="tag-post-title">
+        <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+    </div>
   {%- endfor -%}
 {%- endfor -%}
 
@@ -21,9 +19,7 @@ title: Posts
     <h2>{{ current_year }}</h2>
     {%- assign previous_year = current_year -%}
   {%- endunless -%}
-  <article class="post-item">
-    <h3 class="post-item-title">
-      <a href="{{ post.url }}">{{ post.title | escape }}</a>
-    </h3> 
-  </article>
+  <div class="tag-post-title">
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+  </div>
 {%- endfor -%}
