@@ -33,14 +33,21 @@ plugins:
   - jekyll-archives
 
 jekyll-archives:
-  enabled: []
-  layout: archive
+  enabled:
+    - year
+    - month
+    - day
+    - tags
+  layouts:
+    year: year-archive
+    month: month-archive
+    day: day-archive
+    tag: tag-archive
   permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+    year: /notes/:year
+    month: /notes/:year/:month
+    day: /notes/:year/:month/:day
+    tag: /tags/:name
 
 minima:
   nav_pages:
