@@ -30,6 +30,17 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 minima:
   nav_pages:
@@ -43,9 +54,6 @@ minima:
     - title: Discord
       icon: discord
       url: "https://discord.gg/tCh9wujN"
-
-display_tags: ["markdown"] # these tags will be displayed on the front page of your blog
-display_categories: ["tuto", "jekyll"] # these categories will be displayed on the front page of your blog
 
 # Exclude from processing.
 # The following items will not be processed, by default.
