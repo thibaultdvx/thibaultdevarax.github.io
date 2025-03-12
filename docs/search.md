@@ -1,21 +1,21 @@
 ---
-layout: archive
+layout: page
 title: Posts
 ---
 {% include search-lunr.html %}
 
-<!-- *****
+*****
 
 {%- for category in site.categories -%}
   <h3>{{ category }}</h3>
-    {%- for post in category -%}
-      <article class="post-item">
-        <h4 class="post-item-title">
-          <a href="{{ post.url }}">{{ post.title | escape }}</a>
-        </h4> 
-      </article>
-    {% endfor %}
-{% endfor %}
+  {%- for post in site.categories[category] -%}
+    <article class="post-item">
+      <h4 class="post-item-title">
+        <a href="{{ post.url }}">{{ post.title | escape }}</a>
+      </h4> 
+    </article>
+  {%- endfor -%}
+{%- endfor -%}
 
 *****
 
@@ -30,4 +30,4 @@ title: Posts
       <a href="{{ post.url }}">{{ post.title | escape }}</a>
     </h4> 
   </article>
-{%- endfor -%} -->
+{%- endfor -%}
