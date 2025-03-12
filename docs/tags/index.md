@@ -1,0 +1,25 @@
+---
+layout: tag-archive
+---
+
+{% assign tags = site.tags | sort %}
+
+<div class="flex flex-row flex-wrap space-x-6">
+    {% for tag in tags %}
+        <a href="{{ tag[0] | slugify }}">{{ tag[0] }} ({{ tag[1] | size }})</a>{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+</div>
+
+<hr>
+
+{% for tag in tags %}
+    <a href="{{ tag | first | slugify }}"><h3>{{ tag | first }}</h3></a>
+    <ul>
+        {% for post in tag[1] %}
+        <li class="flex space-x-6 items-baseline">
+            <span class="text-sm">{{ post.date | date: '%Y-%m-%d' }}</span>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endfor %}
