@@ -36,8 +36,7 @@ remote_theme: "jeffreytse/jekyll-theme-yat@v1.10.0"
 
 header_pages:
   - about.html
-  - posts.html
-  - search.html
+  - archives.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
