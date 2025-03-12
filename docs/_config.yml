@@ -34,9 +34,13 @@ plugins:
 
 remote_theme: "jeffreytse/jekyll-theme-yat@v1.10.0"
 
+header_transparent: false
+lang: "fr"
+night_mode: "manual"
+
 header_pages:
-  - about.html
-  - archives.html
+  - about.md
+  - archives.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
