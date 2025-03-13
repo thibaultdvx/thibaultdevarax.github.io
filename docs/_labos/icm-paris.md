@@ -3,6 +3,7 @@ name: ARAMIS Lab, Institut du Cerveau
 address: Hôpital Pitié-Salpêtrière, 47 bd de l'Hôpital, 75013 Paris
 city: Paris
 image: /images/labos/aramis-lab.png
+website: https://www.aramislab.fr/
 contact:
     - name: Thibault de Varax
       email: thibault.devarax@icm-institute.org
