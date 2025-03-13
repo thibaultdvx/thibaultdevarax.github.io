@@ -2,5 +2,5 @@
 layout: home
 heading: "Réseau IABM"
 subheading: "Chercheurs français en Intelligence Artificielle appliquée à l'Imagerie Biomédicale."
-banner: "/images/imagerie.png"
+banner: "/images/biomed.webp"
 ---
