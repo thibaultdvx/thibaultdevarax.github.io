@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: Contact
 ---
 {% assign grouped_by_letter = "" %}
