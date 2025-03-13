@@ -1,0 +1,50 @@
+<!-- {% assign alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
+
+<div class="labo-list">
+  <ul>
+    {% for letter in alphabet %}
+      {% assign count = 0 %}
+    
+      {% for item in site.labos %}
+        {% assign first_letter = item.name | slice: 0, 1 | upcase %}
+        {% if first_letter == letter %}
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if count > 0 %}
+        <li>
+          <a href="{{ url }}#h-{{ key }}">
+            {{ letter }} <span>{{ count }}</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div> -->
+{% assign alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
+
+<div class="sidebar">
+  <nav class="sidebar-nav">
+    <ul class="list-group">
+      {% for letter in alphabet %}
+        {% assign count = 0 %}
+
+        {% for item in site.labos %}
+          {% if item.title %}
+            {% assign first_letter = item.title | slice: 0, 1 | upcase %}
+            {% if first_letter == letter %}
+              {% assign count = count | plus: 1 %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% if count > 0 %}
+          <li class="list-group-item">
+            <a href="#{{ letter }}" class="sidebar-link">{{ letter }} <span class="badge badge-primary">{{ count }}</span></a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
