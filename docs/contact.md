@@ -2,7 +2,7 @@
 layout: default
 title: Contact
 ---
-{% assign grouped_by_letter = "" %}
+<!-- {% assign grouped_by_letter = "" %}
 
 {% for labo in site.labos %}
     {% assign first_letter = labo.name | slice: 0,1 | upcase %}
@@ -30,4 +30,21 @@ title: Contact
             <li>{{ name }}</li>
         {% endfor %}
     </ul>
+{% endfor %} -->
+{% assign sorted_labos = site.labos | sort: "name" %}
+{% assign current_letter = "" %}
+
+{% for labo in sorted_labos %}
+    {% assign first_letter = labo.name | slice: 0,1 | upcase %}
+
+    {% if first_letter != current_letter %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <h2>{{ first_letter }}</h2>
+        <ul>
+        {% assign current_letter = first_letter %}
+    {% endif %}
+
+    <li>{{ labo.name }}</li>
+
+    {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
