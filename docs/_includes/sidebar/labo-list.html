@@ -1,30 +1,22 @@
 {% assign alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
 
-<div class="labo-list">
-    <ul>
-        {% for letter in alphabet %}
-            {% assign filtered_items = site.labos | where_exp: "item", "item.name and item.name | upcase startswith letter" %}
-            {% if filtered_items.size > 0 %}
-                <li>
-                    <a href="{{ url }}#h-{{ key }}">
-                    {{ letter }} <span>{{ filtered_items.size }}</span>
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</div>
-
 <ul>
-    {% for letter in alphabet %}
-      {% assign filtered_items = site.labos | where_exp: "item", "item.name and item.name | upcase startswith letter" %}
-      
-      {% if filtered_items.size > 0 %}
-        <li>
-            <a href="{{ url }}#h-{{ key }}">
-                {{ letter }} <span>{{ filtered_items.size }}</span>
-            </a>
-        </li>
+  {% for letter in alphabet %}
+    {% assign count = 0 %}
+  
+    {% for item in site.labos %}
+      {% assign first_letter = item.name | slice: 0, 1 | upcase %}
+      {% if first_letter == letter %}
+        {% assign count = count | plus: 1 %}
       {% endif %}
     {% endfor %}
-  </ul>
+    
+    {% if count > 0 %}
+      <li>
+        <a href="{{ url }}#h-{{ key }}">
+          {{ letter }} <span>{{ count }}</span>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
