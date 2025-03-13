@@ -5,7 +5,8 @@ layout: page
     <div class="institute-content">
         <div class="institute-text">
             <h2 class="institute-name">{{ page.name }}</h2>
-            <p class="institute-address"><strong>Adresse:</strong> {{ page.address }}, {{ page.city }}</p>
+            <h3 class="institute-name">{{ page.city }}</h3>
+            <p class="institute-address">{{ page.address }}</p>
             {% if page.website %}
             <p class="institute-website"><a href="{{ page.website }}" target="_blank">Site internet</a></p>
             {% endif %}
