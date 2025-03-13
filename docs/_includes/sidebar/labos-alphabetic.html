@@ -1,0 +1,10 @@
+{% assign grouped_labos = site.labos | group_by_exp: "labo", "labo.title | slice: 0,1" | sort: "name" %}
+<div class="sidebar-section">
+    <ul>
+        {% for group in grouped_labos %}
+            <li>
+                <a href="#{{ group.name | downcase }}">{{ group.name | upcase }}</a> ({{ group.items | size }})
+            </li>
+        {% endfor %}
+    </ul>
+</div>
