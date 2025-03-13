@@ -5,7 +5,7 @@ layout: page
     <div class="institute-content">
         <div class="institute-text">
             <h2 class="institute-name">{{ page.name }}</h2>
-            <h3 class="institute-name">{{ page.city }}</h3>
+            <h5 class="institute-name">{{ page.city }}</h5>
             <p class="institute-address">{{ page.address }}</p>
             {% if page.website %}
             <p class="institute-website"><a href="{{ page.website }}" target="_blank">Site internet</a></p>
@@ -42,8 +42,8 @@ layout: page
     .institute-content {
         display: flex;
         align-items: center;
-        gap: 20px;
-        flex-direction: row-reverse;
+        gap: 40px;
+        flex-direction: row;
     }
     .institute-image {
         max-width: 40%;
