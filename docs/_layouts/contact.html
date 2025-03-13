@@ -8,13 +8,13 @@ layout: page
             <h2 class="institute-name">{{ page.name }}</h2>
             <p class="institute-address"><strong>Adresse:</strong> {{ page.address }}, {{ page.city }}</p>
             {% if institute.website %}
-            <p class="institute-website"><strong>Website:</strong> <a href="{{ institute.website }}">Site internet</a></p>
+            <p class="institute-website"><a href="{{ institute.website }}">Site internet</a></p>
             {% endif %}
-            <p class="institute-description">
-                {{ page.content }}
-            </p>
         </div>
     </div>
+    <section class="institute-description">
+        <p>{{ page.content }}</p>
+    </section>
     <section class="institute-contact">
         <h3>Contact</h3>
         <ul>
