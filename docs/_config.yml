@@ -46,10 +46,10 @@ remote_theme: "jeffreytse/jekyll-theme-yat@v1.10.0"
 
 header_transparent: false
 lang: "fr"
-night_mode: "manual"
+night_mode: "off"
 
 banner:
-  opacity: 0.5            # Banner opacity (100% is 1.0)
+  opacity: 0.3            # Banner opacity (100% is 1.0)
 
 header_pages:
   - about.md
