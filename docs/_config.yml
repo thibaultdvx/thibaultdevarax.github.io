@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Chercheurs français en Intelligence Artificielle appliquée à l'Imagerie Biomédicale.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# github_username:  reseau-iabm
+github_username:  reseau-iabm
 
 # Build settings
 plugins:
@@ -42,6 +42,7 @@ defaults:
     values:
       layout: labo
 
+# Theme
 remote_theme: "jeffreytse/jekyll-theme-yat@v1.10.0"
 
 header_transparent: false
@@ -55,6 +56,7 @@ header_pages:
   - about.md
   - archives.md
   - contact.md
+  - contribute.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
