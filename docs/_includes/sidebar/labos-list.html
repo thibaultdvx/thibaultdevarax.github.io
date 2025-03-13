@@ -3,7 +3,9 @@
     <ul>
         {% for group in grouped_labos %}
             <li>
-                <a href="#{{ group.name | downcase }}">{{ group.name | upcase }}</a> ({{ group.items | size }})
+                <a href="#{{ group.name | downcase }}">
+                    {{ group.name | upcase }} <span>{{ group.items | size }}</span>
+                </a>
             </li>
         {% endfor %}
     </ul>
