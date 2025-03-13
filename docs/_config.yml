@@ -51,6 +51,7 @@ night_mode: "manual"
 header_pages:
   - about.md
   - archives.md
+  - contact.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
