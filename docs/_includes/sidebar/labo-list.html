@@ -1,0 +1,11 @@
+<div class="common-list">
+  <ul>
+    {% for key in site.labos %}
+      <li>
+        <a href="{{ url }}#h-{{ key }}">
+          {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
