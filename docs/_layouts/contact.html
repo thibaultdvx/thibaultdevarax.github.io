@@ -1,0 +1,84 @@
+---
+layout: page
+---
+<section class="institute-info">
+    <div class="institute-content">
+        <img class="institute-image" src="{{ page.image }}" alt="{{ page.name }} Image">
+        <div class="institute-text">
+            <h2 class="institute-name">{{ page.name }}</h2>
+            <p class="institute-address"><strong>Adresse:</strong> {{ page.address }}, {{ page.city }}</p>
+            <p class="institute-description">
+                {{ page.content }}
+            </p>
+        </div>
+    </div>
+    <section class="institute-contact">
+        <h3>Contact</h3>
+        <ul>
+            {% for contact in page.contacts %}
+                <li>
+                    <p><strong>Nom:</strong> {{ contact.name }}</p>
+                    <p><strong>Mail:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</section>
+
+<style>
+    .institute-info {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+    }
+    .institute-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .institute-image {
+        max-width: 40%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .institute-text {
+        flex: 1;
+    }
+    .institute-name {
+        color: #2c3e50;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .institute-address, .institute-description {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    .institute-contact {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+    .institute-contact h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .institute-contact ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .institute-contact li {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .institute-contact p {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+</style>
