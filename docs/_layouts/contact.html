@@ -3,14 +3,14 @@ layout: page
 ---
 <section class="institute-info">
     <div class="institute-content">
-        <img class="institute-image" src="{{ page.image }}" alt="{{ page.name }} Image">
         <div class="institute-text">
             <h2 class="institute-name">{{ page.name }}</h2>
             <p class="institute-address"><strong>Adresse:</strong> {{ page.address }}, {{ page.city }}</p>
-            {% if institute.website %}
-            <p class="institute-website"><a href="{{ page.website }}">Site internet</a></p>
+            {% if page.website %}
+            <p class="institute-website"><a href="{{ page.website }}" target="_blank">Site internet</a></p>
             {% endif %}
         </div>
+        <img class="institute-image" src="{{ page.image }}" alt="{{ page.name }} image">
     </div>
     <section class="institute-description">
         <p>{{ page.content }}</p>
@@ -42,6 +42,7 @@ layout: page
         display: flex;
         align-items: center;
         gap: 20px;
+        flex-direction: row-reverse;
     }
     .institute-image {
         max-width: 40%;
@@ -56,9 +57,14 @@ layout: page
         font-size: 24px;
         margin-bottom: 10px;
     }
-    .institute-address, .institute-description {
+    .institute-address, .institute-website {
         margin: 5px 0;
         font-size: 16px;
+    }
+    .institute-description {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
     }
     .institute-contact {
         margin-top: 20px;
