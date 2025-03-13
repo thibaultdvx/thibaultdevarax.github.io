@@ -8,7 +8,7 @@ layout: page
             <h2 class="institute-name">{{ page.name }}</h2>
             <p class="institute-address"><strong>Adresse:</strong> {{ page.address }}, {{ page.city }}</p>
             {% if institute.website %}
-            <p class="institute-website"><a href="{{ institute.website }}">Site internet</a></p>
+            <p class="institute-website"><a href="{{ page.website }}">Site internet</a></p>
             {% endif %}
         </div>
     </div>
@@ -20,8 +20,8 @@ layout: page
         <ul>
             {% for contact in page.contacts %}
                 <li>
-                    <p><strong>Nom:</strong> {{ contact.name }}</p>
-                    <p><strong>Mail:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+                    <p>{{ contact.name }}</p>
+                    <p><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
                 </li>
             {% endfor %}
         </ul>
