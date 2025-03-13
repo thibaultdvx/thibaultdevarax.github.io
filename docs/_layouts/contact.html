@@ -16,7 +16,7 @@ layout: default
         {% assign current_letter = first_letter %}
     {% endif %}
 
-    <li>{{ labo.name }}</li>
+    <li><a href="{{ labo.url }}">{{ labo.name }}</a></li>
 
     {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
