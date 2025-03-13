@@ -1,5 +1,4 @@
 ---
-layout: contact
 name: ARAMIS Lab, Institut du Cerveau
 adress: Hôpital Pitié-Salpêtrière, 47 bd de l'Hôpital, 75013 Paris
 city: Paris
