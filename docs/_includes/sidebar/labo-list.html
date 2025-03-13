@@ -1,11 +1,16 @@
-<div class="common-list">
-  <ul>
-    {% for key in site.labos %}
-      <li>
-        <a href="{{ url }}#h-{{ key }}">
-          {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+{% assign alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
+
+<div class="labo-list">
+    <ul>
+        {% for letter in alphabet %}
+            {% assign filtered_items = site.labos | where_exp: "item", "item.name and item.name | upcase startswith letter" %}
+            {% if filtered_items.size > 0 %}
+                <li>
+                    <a href="{{ url }}#h-{{ key }}">
+                    {{ letter }} <span>{{ filtered_items.size }}</span>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </div>
