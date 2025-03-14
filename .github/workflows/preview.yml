@@ -30,6 +30,9 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: site-artifact  # Explicit artifact name
+          path: _site  # Ensure correct path
 
   # Preview job for PRs
   preview:
@@ -43,7 +46,7 @@ jobs:
       - name: Download built site artifact
         uses: actions/download-artifact@v3
         with:
-          name: github-pages
+          name: site-artifact  # Explicit artifact name
           path: _site  # Ensure correct path
       - name: Deploy Preview to GitHub Pages
         id: preview-deployment
