@@ -2,16 +2,16 @@ email:
   id: 'reseauiabm@gmail.com'
   href: 'mailto:'
   title: 'Email'
-  fa-icon: 'fa fa-envelope-square'
+  fa-icon: 'fab fa-envelope'
 
 discord:
   id: '/tCh9wujN'
   href: ' https://discord.gg/'
   title: 'Discord'
-  fa-icon: 'fa-brands fa-discord'
+  fa-icon: 'fab fa-discord'
 
 github:
   id: 'reseau-iabm'
   href: 'https://github.com/'
   title: 'GitHub'
-  fa-icon: 'fa fa-github-square'
+  fa-icon: 'fab fa-github'
