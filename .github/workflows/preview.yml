@@ -44,5 +44,5 @@ jobs:
         id: preview-deployment
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: _site
+          # source-dir: _site
           preview-branch: pr-preview-${{ github.event.pull_request.number }}
